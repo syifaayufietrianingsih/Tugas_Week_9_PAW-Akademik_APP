@@ -1,0 +1,605 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #2d2a28;
+    background: #f1ece8;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+h3 {
+    font-size: 15px;
+    margin: 28px 0 12px;
+    color: #7a6e67;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+/* judul halaman biasa diberi garis merah di kiri */
+.isi > h2 {
+    border-left: 5px solid #b71c1c;
+    padding-left: 12px;
+}
+
+/* ================= HEADER ================= */
+.kepala {
+    background: #b71c1c;
+    padding-bottom: 70px;
+}
+
+.atas {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 0;
+    margin-right: 24px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 7px;
+    background: #fff;
+    color: #b71c1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.atas nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.atas nav a {
+    padding: 8px 13px;
+    color: #f3cccc;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.15s;
+}
+
+.atas nav a:hover {
+    background: rgba(255, 255, 255, 0.13);
+    color: #fff;
+}
+
+.atas nav a.aktif {
+    background: rgba(255, 255, 255, 0.22);
+    color: #fff;
+    font-weight: 600;
+}
+
+.akun {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #fff;
+    color: #b71c1c;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar.besar {
+    width: 60px;
+    height: 60px;
+    font-size: 26px;
+    background: #b71c1c;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.akun-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.akun-info .nama {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.akun-info .peran {
+    color: #f3cccc;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.akun form {
+    margin: 0;
+}
+
+.akun button {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.akun button:hover {
+    background: #fff;
+    color: #b71c1c;
+}
+
+/* ================= ISI HALAMAN ================= */
+.isi {
+    position: relative;
+    max-width: 980px;
+    margin: -45px auto 30px;
+    padding: 30px 32px;
+    background: #fff;
+    border: 1px solid #e4dcd6;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(60, 30, 20, 0.08);
+}
+
+.kaki {
+    text-align: center;
+    padding: 0 0 28px;
+    font-size: 13px;
+    color: #8a7e77;
+}
+
+/* ================= TABEL ================= */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 18px;
+    border: 1px solid #e4dcd6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background: #f7f1ed;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #7a6e67;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee6e1;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) td {
+    background: #fcfaf8;
+}
+
+tr:hover td {
+    background: #fbefee;
+}
+
+/* ================= FORM ================= */
+.isi form {
+    max-width: 440px;
+    padding: 20px 22px 12px;
+    background: #faf6f3;
+    border: 1px solid #e9e0da;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5b524d;
+}
+
+input, select, textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 10px 12px;
+    border: 1px solid #d3c9c2;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 15px;
+    background: #fff;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #b71c1c;
+    box-shadow: 0 0 0 3px #f4d3d3;
+}
+
+textarea {
+    height: 95px;
+    resize: vertical;
+}
+
+.isi button, .login-form button {
+    background: #b71c1c;
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background 0.15s, transform 0.1s;
+}
+
+.isi button:hover, .login-form button:hover {
+    background: #8e1515;
+    transform: translateY(-1px);
+}
+
+/* ================= PESAN ================= */
+.sukses {
+    padding: 11px 15px;
+    margin: 0 0 18px;
+    background: #e8f4ea;
+    border-left: 4px solid #2e7d32;
+    border-radius: 3px;
+    color: #1b5e20;
+}
+
+.error {
+    padding: 11px 15px;
+    margin: 0 0 18px;
+    background: #fbeaea;
+    border-left: 4px solid #c62828;
+    border-radius: 3px;
+    color: #a31717;
+}
+
+/* ================= LABEL ROLE ================= */
+.badge {
+    display: inline-block;
+    padding: 2px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    background: #777;
+}
+
+.badge-admin {
+    background: #b71c1c;
+}
+
+.badge-dosen {
+    background: #1565c0;
+}
+
+.badge-mahasiswa {
+    background: #2e7d32;
+}
+
+/* ================= DASHBOARD ================= */
+.sapaan {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 22px;
+    background: #faf6f3;
+    border: 1px solid #e9e0da;
+    border-radius: 8px;
+}
+
+.sapaan h2 {
+    margin-bottom: 3px;
+}
+
+.sapaan p {
+    margin: 0;
+    color: #6b625c;
+}
+
+.statistik {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.stat {
+    padding: 16px 18px;
+    border: 1px solid #e4dcd6;
+    border-top: 4px solid #b71c1c;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.stat:nth-child(2) {
+    border-top-color: #1565c0;
+}
+
+.stat:nth-child(3) {
+    border-top-color: #2e7d32;
+}
+
+.stat .angka {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #2d2a28;
+}
+
+.stat .label {
+    font-size: 13px;
+    color: #7a6e67;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 14px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 16px;
+    background: #fff;
+    border: 1px solid #e4dcd6;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #2d2a28;
+    transition: border-color 0.15s, transform 0.15s;
+}
+
+.menu:hover {
+    border-color: #b71c1c;
+    transform: translateY(-2px);
+}
+
+.ikon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #fbe9e9;
+    color: #b71c1c;
+    font-weight: 700;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu b {
+    display: block;
+    color: #2d2a28;
+}
+
+.menu div span {
+    font-size: 13px;
+    color: #7a6e67;
+}
+
+/* ================= LOGIN ================= */
+.login-wrap {
+    display: flex;
+    min-height: 100vh;
+}
+
+.login-kiri {
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 40px;
+    background: #b71c1c;
+    color: #fff;
+    text-align: center;
+}
+
+/* motif lingkaran di latar */
+.login-kiri::before,
+.login-kiri::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 50px solid rgba(255, 255, 255, 0.07);
+}
+
+.login-kiri::before {
+    width: 340px;
+    height: 340px;
+    top: -110px;
+    left: -110px;
+}
+
+.login-kiri::after {
+    width: 420px;
+    height: 420px;
+    bottom: -170px;
+    right: -130px;
+}
+
+.login-kiri > * {
+    position: relative;
+    z-index: 1;
+}
+
+.logo.besar {
+    width: 78px;
+    height: 78px;
+    font-size: 42px;
+    border-radius: 16px;
+}
+
+.login-kiri h1 {
+    margin-top: 18px;
+    font-size: 42px;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    margin: 4px 0 0;
+    color: #f3cccc;
+    font-size: 17px;
+}
+
+.login-kanan {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 24px;
+    background: #fff;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 350px;
+}
+
+.login-form h2 {
+    margin-bottom: 4px;
+    font-size: 26px;
+}
+
+.login-form .sub {
+    margin: 0 0 22px;
+    color: #7a6e67;
+}
+
+.login-form button {
+    width: 100%;
+    margin-top: 4px;
+    padding: 12px;
+}
+
+/* ================= HP / LAYAR KECIL ================= */
+@media (max-width: 760px) {
+    .login-wrap {
+        flex-direction: column;
+    }
+    .login-kiri {
+        padding: 34px 24px;
+    }
+    .atas {
+        padding: 0 14px;
+    }
+    .akun {
+        margin-left: 0;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .isi {
+        margin: -45px 12px 24px;
+        padding: 20px 16px;
+    }
+    .sapaan {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* ================= TOMBOL AKSI (EDIT / HAPUS) ================= */
+td.aksi {
+    white-space: nowrap;
+}
+
+td.aksi form {
+    display: inline;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+}
+
+.tombol-edit {
+    display: inline-block;
+    padding: 5px 13px;
+    margin-right: 4px;
+    border: 1px solid #1565c0;
+    border-radius: 5px;
+    color: #1565c0;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.tombol-edit:hover {
+    background: #1565c0;
+    color: #fff;
+}
+
+.isi button.tombol-hapus {
+    padding: 5px 13px;
+    margin: 0;
+    background: #fff;
+    border: 1px solid #b71c1c;
+    border-radius: 5px;
+    color: #b71c1c;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.isi button.tombol-hapus:hover {
+    background: #b71c1c;
+    color: #fff;
+    transform: none;
+}
+
+.batal {
+    display: inline-block;
+    margin-left: 10px;
+    color: #7a6e67;
+    text-decoration: none;
+}
+
+.batal:hover {
+    color: #b71c1c;
+}
